@@ -148,8 +148,6 @@ onSnapshot(q, (snapshot) => {
     list.appendChild(li);
   });
 });
-
-/* Small helper to prevent HTML injection */
 function escapeHtml(str) {
   return String(str)
     .replaceAll("&", "&amp;")
@@ -158,3 +156,14 @@ function escapeHtml(str) {
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 }
+
+document.getElementById('fullscreenBtn').addEventListener('click', () => {
+    const iframeContainer = document.querySelector('.iframe-container');
+    if (!document.fullscreenElement) {
+        iframeContainer.requestFullscreen().catch(err => {
+            alert(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+    } else {
+        document.exitFullscreen();
+    }
+});

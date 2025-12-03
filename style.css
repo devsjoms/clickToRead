@@ -8,7 +8,7 @@
 /* Background stays the same */
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #6db3f2, #1e69de);
+    background-color: #ac07b8;
     color: #fff;
 }
 
@@ -283,3 +283,30 @@ body.index {
   gap: 10px;
 }
 .fw-note { opacity: 0.75; font-size: 0.85rem; }
+
+/* Center the iframe container */
+.iframe-container {
+    position: relative;
+    width: 800px;   /* fixed, natural size */
+    height: 450px;  /* 16:9 ratio */
+    margin: 50px auto; /* center horizontally with some top margin */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: inherit; /* keep your existing background */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Default HTML button style */
+#fullscreenBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
