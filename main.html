@@ -7,6 +7,81 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="header">
+        <a href="index.html"><button class="back-btn">Back</button></a>
+        <h1 class="logo">Cliq2Read</h1>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Learn. Explore. Discover.</h2>
+            <p>Your gateway to interactive reading experiences.</p>
+        </div>
+    </section>
+
+    <section class="main">
+        <h2 class="section-title">Choose Your Story</h2>
+
+        <div class="card-container">
+            <div class="card">
+                <a href="routes/route1.html">
+                    <img src="img/route1.jpg" alt="">
+                    <h3>Story Route 1</h3>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="routes/route2.html">
+                    <img src="img/route2.jpg" alt="">
+                    <h3>Story Route 2</h3>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="routes/route3.html">
+                    <img src="img/route3.jpg" alt="">
+                    <h3>Story Route 3</h3>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="routes/route4.html">
+                    <img src="img/route4.jpg" alt="">
+                    <h3>Story Route 4</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="freedom-section">
+  <h2 class="section-title">Freedom Wall</h2>
+
+  <div class="freedom-wall">
+    <textarea id="fw-input" placeholder="Write your message here..."></textarea>
+    <div class="fw-controls">
+      <button id="fw-post">Post Message</button>
+      <button id="fw-view">View Messages</button>
+      <button id="fw-username">Set Name</button>
+    </div>
+  </div>
+    </section>
+
+    <div id="fw-popup" class="fw-modal" aria-hidden="true">
+    <div class="fw-modal-content" role="dialog" aria-modal="true" aria-labelledby="fw-title">
+        <span class="fw-close" title="Close">&times;</span>
+        <h3 id="fw-title">Freedom Wall Messages</h3>
+        <div id="fw-list-wrapper">
+        <ul id="fw-list"></ul>
+        </div>
+        <div class="fw-footer">
+        <button id="fw-clear-local">Clear Local Name</button>
+        <small class="fw-note">Messages are public & stored in Firestore.</small>
+        </div>
+    </div>
+    </div>
 
 </body>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js"></script>
+<script type="module" src="index.js"></script>
 </html>
