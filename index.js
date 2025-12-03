@@ -1,6 +1,4 @@
-// freedom.js (copy/paste entire file)
-// This script uses modular Firebase v10+ imports. It must be loaded as a module:
-// <script type="module" src="freedom.js"></script>
+
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import {
@@ -15,10 +13,6 @@ import {
   doc
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-/* ======= PASTE YOUR FIREBASE CONFIG BELOW =======
-   Replace the values with your project's config found in:
-   Firebase Console → Project Settings → SDK setup (Config)
-*/
 const firebaseConfig = {
   apiKey: "AIzaSyDl2hhMSxuUkHwbY010JrIW_lBkxt9LtrM",
   authDomain: "cliq2read.firebaseapp.com",
@@ -27,12 +21,10 @@ const firebaseConfig = {
   messagingSenderId: "733605042772",
   appId: "1:733605042772:web:53ebad2ad2e03a90bc6bc1"
 };
-/* ================================================= */
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-/* DOM */
 const input = document.getElementById("fw-input");
 const btnPost = document.getElementById("fw-post");
 const btnView = document.getElementById("fw-view");
@@ -42,7 +34,6 @@ const closeBtn = document.querySelector(".fw-close");
 const list = document.getElementById("fw-list");
 const clearLocalBtn = document.getElementById("fw-clear-local");
 
-/* Local username handling */
 function getUsername() {
   return localStorage.getItem("fw_username") || null;
 }
@@ -61,10 +52,7 @@ function promptForName() {
   }
 }
 
-/* Ask for name if none yet */
 if (!getUsername()) {
-  // ask when they first interact (optional to avoid immediate popup)
-  // promptForName();
 }
 
 /* Post message */
@@ -91,19 +79,16 @@ btnPost.addEventListener("click", async () => {
   }
 });
 
-/* Open popup */
 btnView.addEventListener("click", () => {
   popup.style.display = "block";
   popup.setAttribute("aria-hidden", "false");
 });
 
-/* Close popup */
 closeBtn.addEventListener("click", () => {
   popup.style.display = "none";
   popup.setAttribute("aria-hidden", "true");
 });
 
-/* Click outside to close */
 window.addEventListener("click", (e) => {
   if (e.target === popup) {
     popup.style.display = "none";
