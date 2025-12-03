@@ -169,7 +169,7 @@ body.index {
   outline: none;
   font-size: 1rem;
   background: rgba(255,255,255,0.02);
-  color: #fff;
+  color: #131212;
 }
 
 .fw-controls {
@@ -185,7 +185,7 @@ body.index {
   cursor: pointer;
   font-weight: 600;
   background: #ffe28a;
-  color: #222;
+  color: #0a0a0a;
   transition: .16s ease;
 }
 
