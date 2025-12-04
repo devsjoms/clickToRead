@@ -145,6 +145,12 @@ body.index {
 
 .card h3 {
     margin-top: 5px;
+    color: #f5eded;
+}
+
+.card a {
+    text-decoration: none;   /* removes underline */
+    color: inherit;          /* keeps your existing text color */
 }
 
 .freedom-wall {
@@ -171,7 +177,10 @@ body.index {
   background: rgba(255,255,255,0.02);
   color: #131212;
 }
-
+.freedom-wall textarea::placeholder {
+    color: #0d0000; /* <— change this to whatever color you want */
+    opacity: 1;  /* ensures the color is not faded */
+}
 .fw-controls {
   display: flex;
   gap: 10px;
