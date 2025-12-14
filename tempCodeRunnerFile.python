@@ -1,87 +1,29 @@
-"""def greet(name):
-    return f"Hello, {name}!"
+def recurse(n):
+    count = 0
+    a = 0
+    while count != n:
+        ao = 2 * a + 3
+        print(ao)
+        count += 1
 
-print(greet("Allyson"))
-num = int(input("Enter a Number: "))
+recurse(5)
+'''arr = [2,5,4,3,6,7,9]
+left = []
+right = []
+r = -1
+low = 100
+for i,num in enumerate(arr):
+    while i != len(arr) / 2:
+        left.append(num)
+    else:
+        right.append(num)
 
-if num % 2 == 0:
-    print("Even")
-else:
-    print("Odd")
-    
-for i in range(1,21):
-    print(i)
-fruits = ["apple", "manggo", "orange"]
-for fruit in fruits:
-    print(fruit)
-def addToList(item):
-    ls = []
-    ls.append(item)
-    return ls
-print(addToList("1"))"""
-
-'''def fullName(fname, lname):
-    return f"{fname} {lname}"
-print(fullName("Kyla", "Verroya"))
-num = int(input("Enter a number: "))
-if num % 3 == 0:
-    print("Divisible by 3")
-else: 
-    print("Not divisible by 3")
-
-for i in range(0,11):
-    print(f"{7}x{i} = {7*i}")
-
-items = ["pen", "notebook", "eraser", "marker"]
-for i,item in enumerate(items):
-    print(f"{i}:{item}")
-
-def highest(ls):
-    return max(ls)
-print(highest([1,2,3,4,5]))'''
-
-
-def fare(distance):
-    base = 45
-    per_km = 10
-    total = base + (per_km * distance)
-    return total
-
-distance = float(input("Enter distance (km): "))
-pickup_time = int(input("Enter pickup time (0-23): "))
-
-cost = fare(distance)
-
-if pickup_time >= 22 or pickup_time <= 5:
-    cost *= 1.20
-    print("Night surcharge applied.")
-
-print(f"Final cost: ₱{cost:.2f}")
-
-ratings = []
-print("\nEnter 5 passenger ratings (1-5):")
-for i in range(5):
-    while True:
-        rate = int(input(f"Rating {i+1}: "))
-        if 1 <= rate <= 5:
-            ratings.append(rate)
-            break
-        else:
-            print("Invalid! Rating must be 1-5.")
-
-avg_rating = sum(ratings) / len(ratings)
-print(f"\nAverage Driver Rating: {avg_rating:.2f}")
-
-
-times = [12, 8, 15, 7, 20, 25, 91]
-long_trips = [t for t in times if t > 15]
-print("\nTrips longer than 15 minutes:", long_trips)
-
-def common_locations(list1, list2):
-    return list(set(list1) & set(list2))
-
-
-listA = ["Mall", "Airport", "Park", "SM", "Ayala"]
-listB = ["Church", "Park", "Ayala", "Terminal"]
-
-print("\nCommon pickup points:", common_locations(listA, listB))
+    for i in right:
+        if i > r:
+            r = i
+    for i in left:
+        if i < low:
+            low = i
+    sg = set(r,low)
+    print(sg)
+    '''

@@ -12,11 +12,29 @@
         <h1 class="logo">Cliq2Read</h1>
     </header>
 <div class="iframe-container">
-    <iframe id="myIframe" src="https://docs.google.com/presentation/d/e/2PACX-1vQP1ccnuM61SgXl2L6U8_HtKNUxYA-DiN8nH7k1Ma9jQGJ6CvDJGvfzE_6cFz2XMTc9u9PuoKiRzyXa/pubembed?start=false&loop=false&delayms=3000"
-     frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
-    </iframe>
+  <button class="fs-btn" onclick="openFullscreen()">⛶</button>
+
+  <iframe
+    id="pptFrame"
+    src="https://1drv.ms/p/c/abc7fcda7c1e41d1/IQQSSeAUG6y_SYR1zK7_C98kAW_y3resnbiT0XrCeMjE4fo?em=2&amp;wdAr=1.7777777777777777"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
 </div>
 
 <script src="../index.js"></script>
+<script>
+    function openFullscreen() {
+  const container = document.querySelector(".iframe-container");
+
+  if (container.requestFullscreen) {
+    container.requestFullscreen();
+  } else if (container.webkitRequestFullscreen) {
+    container.webkitRequestFullscreen(); // Safari
+  } else if (container.msRequestFullscreen) {
+    container.msRequestFullscreen(); // IE/Edge
+  }
+}
+</script>
 </body>
 </html>
