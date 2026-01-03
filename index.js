@@ -167,5 +167,3 @@ document.getElementById('fullscreenBtn').addEventListener('click', () => {
         document.exitFullscreen();
     }
 });
-
-
